@@ -32,6 +32,13 @@ x-var3: &DEFAULT_REPOS
 - &f17 "DISTRO_REPO=https://github.com/opentibiabr/canary.git"               # LINK DO DOWNLOAD YOUR CANARY REPOSITORY FILES / BY DEFAULT MAIN CANARY https://github.com/opentibiabr/canary.git
 - &f18 "DISTRO_BRANCH=main"                                                  # DISTRO BRANCH TO DOWNLOAD / IF YOU DON'T KNOW WHAT IT MEANS, LEAVE AS IS
 
+x-var4: &SYTEM_SETTINGS
+- &s1 "CHECK_DISTRO_UPDATES=yes"                # CHECK IF YOUR DISTRO HAS NEW COMMITS/UPDATES (yes / no)
+- &s2 "CHECK_DATAPACK_UPDATES=yes"              # CHECK IF YOUR DATAPACK HAS NEW COMMITS/UPDATES (yes / no)
+- &s3 "CHECK_AAC_UPDATES=yes"                   # CHECK IF YOUR AAC HAS NEW COMMITS/UPDATES (yes / no)
+- &s4 "CHECK_VA_UPDATES=yes"                    # CHECK IF YOUR OTBR VIRTUAL APPLIANCE HAS NEW COMMITS/UPDATES (yes / no)
+- &s5 "AUTOUPDATE_VA=yes"                       # AUTO-UPDATE YOUR OTBR VIRTUAL APPLIANCE (yes / no)
+
 #####################################################
 #####################################################
 #####################################################
@@ -83,6 +90,11 @@ services:
       - *f16
       - *f17
       - *f18
+      - *s1
+      - *s2
+      - *s3
+      - *s4
+      - *s5
   db:
     image: mariadb:10.5
     hostname: otservdb
