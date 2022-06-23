@@ -1,7 +1,7 @@
 #!/bin/bash
 
 N=10
-DEFAULT_MAP="${CHECK_DISTRO_UPDATES:-otbr}"
+DEFAULT_MAP="${DEFAULT_MAP:-otbr}"
 
 echo ""
 echo ""
