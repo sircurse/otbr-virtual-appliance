@@ -3,8 +3,6 @@
 CHECK_DISTRO_UPDATES="${CHECK_DISTRO_UPDATES:-yes}"
 CHECK_DATAPACK_UPDATES="${CHECK_DATAPACK_UPDATES:-yes}"
 CHECK_AAC_UPDATES="${CHECK_AAC_UPDATES:-yes}"
-CHECK_VA_UPDATES="${CHECK_VA_UPDATES:-yes}"
-AUTOUPDATE_VA="${AUTOUPDATE_VA:-yes}"
 AAC_REPO="${AAC_REPO:-https://github.com/sircurse/myaac.git}"
 AAC_BRANCH="${AAC_BRANCH:-master}"
 DATAPACK_REPO="${DATAPACK_REPO:-https://github.com/opentibiabr/otservbr-global.git}"
@@ -19,7 +17,7 @@ SUFFIX=".git"
 if [ "$CHECK_DISTRO_UPDATES" == "yes" ]; then
 REMOTE_DISTRO=${DISTRO_REPO#"$PREFIX"}
 REMOTE_DISTRO=${REMOTE_DISTRO%"$SUFFIX"}
-wget --output-document="/otbr/system/tmp/distro-version.json" -q https://raw.githubusercontent.$REMOTE_DISTRO/main/package.json
+wget -q -O /otbr/system/tmp/distro-version.json https://raw.githubusercontent.$REMOTE_DISTRO/main/package.json
 REMOTE_DISTRO_VER=$(grep '"version":' /otbr/system/tmp/distro-version.json -m1 | cut -d\" -f4)
 REMOTE_DISTRO_MAJOR=${REMOTE_DISTRO_VER%%.*}
 REMOTE_DISTRO_PATCH=${REMOTE_DISTRO_VER##*.}
@@ -72,7 +70,7 @@ fi
 if [ "$CHECK_DATAPACK_UPDATES" == "yes" ]; then
 REMOTE_DATAPACK=${DATAPACK_REPO#"$PREFIX"}
 REMOTE_DATAPACK=${REMOTE_DATAPACK%"$SUFFIX"}
-wget --output-document="/otbr/system/tmp/datapack-version.json" -q https://raw.githubusercontent.$REMOTE_DATAPACK/main/package.json
+wget -q -O /otbr/system/tmp/datapack-version.json https://raw.githubusercontent.$REMOTE_DATAPACK/main/package.json
 REMOTE_DATAPACK_VER=$(grep '"version":' /otbr/system/tmp/datapack-version.json -m1 | cut -d\" -f4)
 REMOTE_DATAPACK_MAJOR=${REMOTE_DATAPACK_VER%%.*}
 REMOTE_DATAPACK_PATCH=${REMOTE_DATAPACK_VER##*.}
@@ -124,7 +122,7 @@ fi
 if [ "$CHECK_AAC_UPDATES" == "yes" ]; then
 REMOTE_AAC=${AAC_REPO#"$PREFIX"}
 REMOTE_AAC=${REMOTE_AAC%"$SUFFIX"}
-wget --output-document="/otbr/system/tmp/aac-version.json" -q https://raw.githubusercontent.$REMOTE_AAC/main/package.json
+wget -q -O /otbr/system/tmp/aac-version.json https://raw.githubusercontent.$REMOTE_AAC/main/package.json
 REMOTE_AAC_VER=$(grep '"version":' /otbr/system/tmp/aac-version.json -m1 | cut -d\" -f4)
 REMOTE_AAC_MAJOR=${REMOTE_AAC_VER%%.*}
 REMOTE_AAC_PATCH=${REMOTE_AAC_VER##*.}

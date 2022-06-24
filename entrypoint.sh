@@ -5,8 +5,10 @@ DEFAULT_MAP="${DEFAULT_MAP:-otbr}"
 
 echo ""
 echo ""
+echo "########################################################################"
+echo "########################################################################"
 echo ""
-
+/bin/bash /otbr/system/va-check-update.sh
 /bin/bash /otbr/system/server-build.sh
 /bin/bash /otbr/system/server-check-update.sh
 

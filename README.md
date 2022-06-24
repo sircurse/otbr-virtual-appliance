@@ -8,17 +8,17 @@
 ![Pulls](https://img.shields.io/docker/pulls/sircurse/otbr-va)
 
 ## Project - OpenTibiaBR
-OpenTibiaBR (OTBR) - Canary is a free and open-source MMORPG server emulator written in C++.
+OpenTibiaBR - Canary is a free and open-source MMORPG server emulator written in C++.
 
-In the project's repo [OTServBR-Canary](https://github.com/opentibiabr/canary), you can see the repository history in the [releases](https://github.com/opentibiabr/canary/releases).
+In the project's repo [Canary](https://github.com/opentibiabr/canary), you can see the repository history in the [releases](https://github.com/opentibiabr/canary/releases).
 
 The [OpenTibiaBR - Global](https://github.com/opentibiabr/otservbr-global) was adapted to work with the source of the Canary, so it is the default datapack to be used with Canary distro.
 
 The intention of this project is to serve as an automated image, including all packages, files and basic configurations that allows the deployment of the Canary server and to first run it smoothly.
 
-To connect to the server and to take a stable experience, you can use our [own client](https://github.com/opentibiabr/otclient) or [tibia client](https://forums.otserv.com.br/index.php?/forums/topic/167933-otservbr-global-cliente-tibia-12/) and if you want to edit something, check our [customized tools](https://github.com/opentibiabr/tools).
+To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient) or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check our [customized tools](https://majestyotbr.gitbook.io/opentibiabr/others/downloads/tools).
 
-If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/tree/canary).
+If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
 
 You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/canary/blob/master/CODE_OF_CONDUCT.md).
 
