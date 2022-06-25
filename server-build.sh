@@ -163,7 +163,7 @@ then
 		chmod -R 770 system/cache
 		echo "AAC permissions set with success!"
 		echo "ATTENTION: MyAAC is not yet installed, to complete the installation go to:"
-		if [[ $HTTP_PORT != 80 && $HTTP_PORT != 443 ]]; then
+		if [[ $HTTP_PORT != 80 ]] || [[ $HTTP_PORT != 443 ]]; then
 			echo "$WEBPAGE:$HTTP_PORT/install"
 		else
 			echo "$WEBPAGE/install"
@@ -186,7 +186,7 @@ else
 	chmod -R 770 system/cache
 	echo "AAC permissions set with success!"
 	echo "ATTENTION: MyAAC is not yet installed, to complete the installation go to:"
-		if [[ $HTTP_PORT != 80 && $HTTP_PORT != 443 ]]; then
+		if [[ $HTTP_PORT != 80 ]] || [[ $HTTP_PORT != 443 ]]; then
 			echo "$WEBPAGE:$HTTP_PORT/install"
 		else
 			echo "$WEBPAGE/install"
@@ -197,7 +197,7 @@ fi
 if [ -f /etc/nginx/sites-available/default ]; then
 	sleep 0
 else
-	if [ "$ENABLE_SSL" == "yes" ]
+	if [[ "$ENABLE_SSL" == "yes" ]]
 	then
 		cp /etc/nginx/templates/ssl-enabled /etc/nginx/sites-available/default
 	else

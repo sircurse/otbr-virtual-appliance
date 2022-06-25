@@ -12,7 +12,6 @@ DISTRO_BRANCH="${DISTRO_BRANCH:-main}"
 PREFIX="https://github."
 SUFFIX=".git"
 
-
 # Check Distro Updates
 if [ "$CHECK_DISTRO_UPDATES" == "yes" ]; then
 REMOTE_DISTRO=${DISTRO_REPO#"$PREFIX"}
@@ -30,7 +29,7 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_VER##$LOCAL_DISTRO_MAJOR.}
 LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
 
     if [ "$LOCAL_DISTRO_MAJOR" != "$REMOTE_DISTRO_MAJOR" ]; then
-    echo $LOCAL_DISTRO_MAJOR $REMOTE_DISTRO_MAJOR
+        echo ""
         echo "There is a major release on Canary Distro. For more information please check the latest commits on:"
         echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
@@ -38,9 +37,9 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
         echo "You can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
-        echo ""
     else
         if [ "$LOCAL_DISTRO_MINOR" != "$REMOTE_DISTRO_MINOR" ]; then
+            echo ""
             echo "There is a minor update on Canary Distro. For more information please check the latest commits on:"
             echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
@@ -48,14 +47,13 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
             echo "You can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
-            echo ""
         else
             if [ "$LOCAL_DISTRO_PATCH" != "$REMOTE_DISTRO_PATCH" ]; then
+                echo ""
                 echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
                 echo "You can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
-                echo ""
                 echo ""
             else
                 sleep 0
@@ -83,6 +81,7 @@ LOCAL_DATAPACK_MINOR=${LOCAL_DATAPACK_VER##$LOCAL_DATAPACK_MAJOR.}
 LOCAL_DATAPACK_MINOR=${LOCAL_DATAPACK_MINOR%%.$LOCAL_DATAPACK_PATCH}
 
     if [ "$LOCAL_DATAPACK_MAJOR" != "$REMOTE_DATAPACK_MAJOR" ]; then
+        echo ""
         echo "There is a major release on Canary Distro. For more information please check the latest commits on:"
         echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
@@ -90,9 +89,9 @@ LOCAL_DATAPACK_MINOR=${LOCAL_DATAPACK_MINOR%%.$LOCAL_DATAPACK_PATCH}
         echo "You can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
-        echo ""
     else
         if [ "$LOCAL_DATAPACK_MINOR" != "$REMOTE_DATAPACK_MINOR" ]; then
+            echo ""
             echo "There is a minor update on Canary Distro. For more information please check the latest commits on:"
             echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
@@ -100,14 +99,13 @@ LOCAL_DATAPACK_MINOR=${LOCAL_DATAPACK_MINOR%%.$LOCAL_DATAPACK_PATCH}
             echo "You can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
-            echo ""
         else
             if [ "$LOCAL_DATAPACK_PATCH" != "$REMOTE_DATAPACK_PATCH" ]; then
+                echo ""
                 echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
                 echo "You can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
-                echo ""
                 echo ""
             else
                 sleep 0
@@ -135,6 +133,7 @@ LOCAL_AAC_MINOR=${LOCAL_AAC_VER##$LOCAL_AAC_MAJOR.}
 LOCAL_AAC_MINOR=${LOCAL_AAC_MINOR%%.$LOCAL_AAC_PATCH}
 
     if [ "$LOCAL_AAC_MAJOR" != "$REMOTE_AAC_MAJOR" ]; then
+        echo ""
         echo "There is a major release on Canary Distro. For more information please check the latest commits on:"
         echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
@@ -142,9 +141,9 @@ LOCAL_AAC_MINOR=${LOCAL_AAC_MINOR%%.$LOCAL_AAC_PATCH}
         echo "You can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
-        echo ""
     else
         if [ "$LOCAL_AAC_MINOR" != "$REMOTE_AAC_MINOR" ]; then
+            echo ""
             echo "There is a minor update on Canary Distro. For more information please check the latest commits on:"
             echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
@@ -152,14 +151,13 @@ LOCAL_AAC_MINOR=${LOCAL_AAC_MINOR%%.$LOCAL_AAC_PATCH}
             echo "You can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
-            echo ""
         else
             if [ "$LOCAL_AAC_PATCH" != "$REMOTE_AAC_PATCH" ]; then
+                echo ""
                 echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
                 echo "You can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
-                echo ""
                 echo ""
             else
                 sleep 0

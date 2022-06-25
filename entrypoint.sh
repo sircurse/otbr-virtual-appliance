@@ -6,12 +6,10 @@ DEFAULT_MAP="${DEFAULT_MAP:-otbr}"
 echo ""
 echo ""
 echo "########################################################################"
-echo "########################################################################"
-echo ""
+
 /bin/bash /otbr/system/va-check-update.sh
 /bin/bash /otbr/system/server-build.sh
 /bin/bash /otbr/system/server-check-update.sh
-
 
 echo "######################## STARTING UP SERVICES ##########################"
 sleep $N
@@ -23,7 +21,7 @@ echo ""
 
 echo "Starting PHP-FPM..."
 service php8.1-fpm start
-echo "* Starting PHP-FPM [ OK ]"
+pgrep -x php-fpm8.1 >/dev/null && echo "* Starting PHP-FPM        [ OK ]" || echo "PHP-FPM could not start!"
 echo ""
 
 echo "Starting Nginx..."
@@ -33,12 +31,12 @@ echo ""
 echo "########################################################################"
 echo "###################### STARTING UP CANARY SERVER #######################"
 echo "########################################################################"
-if [ -f /otbr/distro/canary ]; then
-	echo "Updating OTBR distro..."
+if [ -f /otbr/system/canary ]; then
+	echo "Updating OTBR Canary distro..."
 	rm /otbr/server/canary
-	cp /otbr/system/canary /otbr/server/canary
-	chown otadmin:root /otbr/server/canary
-	echo "OTBR distro updated with success!"
+	cp -p /otbr/system/canary /otbr/server/canary
+	mv /otbr/system/canary /otbr/system/canary.old
+	echo "OTBR Canary distro updated with success!"
 fi
 
 if [ "$DEFAULT_MAP" == "otbr" ]; then

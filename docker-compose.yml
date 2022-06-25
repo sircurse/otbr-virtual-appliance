@@ -11,32 +11,32 @@ version: '3.4'
 x-var1: &OTBR_VARS
 - &f1 "HTTP_PORT=8080"                         # PORT USED BY YOUR AAC (80, 443, 8080 ARE THE MOST USED)
 - &f2 "ENABLE_SSL=no"                          # ENABLE OR DISABLE SSL / BY DEFAULT IS DISABLED (yes/no)
-- &f3 "SERVER_IP=127.0.0.1"                    # YOUR SERVER IP / CAN BE LOCAL IP OR PUBLIC IP
-- &f4 "SERVER_NAME=canary"                     # YOUR SERVER NAME / CAN BE ANY
-- &f5 "SERVER_LOCATION=South America"          # YOUR SERVER LOCATION / South America / Europe / Asia / North America / Africa
-- &f6 "TZ=America/Sao_Paulo"                   # YOUR LOCAL TIME ZONE / FOR REFERENCE CHECK https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-- &f7 "WEBPAGE=https://my.webpage.com"         # URL TO YOUR AAC PAGE, REMEBER TO SET ACCORDINGLY WHEN IT IS HTTP OR HTTPS
-- &f8 "DEFAULT_MAP=otbr"                       # IF YOU USE STANDARD OTBR GLOBAL MAP, SET IT TO (otbr), IF YOU USE CANARY OR CUSTOM MAP SET IT TO (none)
+- &f3 "SERVER_IP=127.0.0.1"                    # SERVER IP / DEFAULT IS LOCAL (127.0.0.1)
+- &f4 "SERVER_NAME=canary"                     # SERVER NAME / CAN BE ANY
+- &f5 "SERVER_LOCATION=South America"          # SERVER LOCATION / South America / Europe / Asia / North America / Africa
+- &f6 "TZ=America/Sao_Paulo"                   # LOCAL TIME ZONE / CHECK https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+- &f7 "WEBPAGE=https://my.webpage.com"         # AAC WEB ADDRESS, REMEBER TO SET ACCORDINGLY WHEN IT IS HTTP OR HTTPS
+- &f8 "DEFAULT_MAP=otbr"                       # DEFAULT OTBR GLOBAL MAP (otbr), IF YOU USE CANARY OR CUSTOM MAP SET TO (none)
 
 x-var2: &DB_VARS
-- &f9 "MARIADB_USER=otbr"                      # USERNAME FOR YOUR DATABASE
-- &f10 "MARIADB_PASSWORD=otbrpass"             # PASSWORD FOR YOUR DATABASE
-- &f11 "MARIADB_ROOT_PASSWORD=@otbr@123#"      # PASSWORD FOR YOUR ROOT USER, PLEASE CHAGE IT FOR YOUR OWN SECURITY
+- &f9 "MARIADB_USER=otbr"                      # USERNAME FOR DATABASE
+- &f10 "MARIADB_PASSWORD=otbrpass"             # PASSWORD FOR DATABASE
+- &f11 "MARIADB_ROOT_PASSWORD=@otbr@123#"      # PASSWORD FOR DB ROOT USER, PLEASE CHAGE IT FOR YOUR OWN SECURITY
 - &f12 "MARIADB_DATABASE=canary"               # NAME FOR YOUR OTSERV DATABASE
 
 x-var3: &DEFAULT_REPOS
-- &f13 "AAC_REPO=https://github.com/sircurse/myaac.git"                      # LINK DO DOWNLOAD YOUR AAC SYSTEM / RECOMMENDED MYAAC https://github.com/sircurse/myaac.git
-- &f14 "AAC_BRANCH=main"                                                     # AAC BRANCH TO DOWNLOAD / BY DEFAULT MAIN BY SIRCURSE / IF YOU CHOOSE A DIFFERENT REPOSITORY ENSURE YOU SELECT THE RIGHT BRANCH
-- &f15 "DATAPACK_REPO=https://github.com/opentibiabr/otservbr-global.git"    # LINK DO DOWNLOAD YOUR DATAPACK REPOSITORY FILES / BY DEFAULT MAIN OTBR https://github.com/opentibiabr/otservbr-global.git
-- &f16 "DATAPACK_BRANCH=main"                                                # DATAPACK BRANCH TO DOWNLOAD / IF YOU DON'T KNOW WHAT IT MEANS, LEAVE AS IS
-- &f17 "DISTRO_REPO=https://github.com/opentibiabr/canary.git"               # LINK DO DOWNLOAD YOUR CANARY REPOSITORY FILES / BY DEFAULT MAIN CANARY https://github.com/opentibiabr/canary.git
-- &f18 "DISTRO_BRANCH=main"                                                  # DISTRO BRANCH TO DOWNLOAD / IF YOU DON'T KNOW WHAT IT MEANS, LEAVE AS IS
+- &f13 "AAC_REPO=https://github.com/sircurse/myaac.git"                      # LINK OF AAC SYSTEM'S REPO / RECOMMENDED MYAAC https://github.com/sircurse/myaac.git
+- &f14 "AAC_BRANCH=main"                                                     # AAC BRANCH TO DOWNLOAD / BY DEFAULT MAIN
+- &f15 "DATAPACK_REPO=https://github.com/opentibiabr/otservbr-global.git"    # LINK OF DATAPACK'S REPO / BY DEFAULT OTBR https://github.com/opentibiabr/otservbr-global.git
+- &f16 "DATAPACK_BRANCH=main"                                                # DATAPACK BRANCH TO DOWNLOAD / BY DEFAULT MAIN
+- &f17 "DISTRO_REPO=https://github.com/opentibiabr/canary.git"               # LINK OF DISTRO'S REPO / BY DEFAULT OTBR CANARY https://github.com/opentibiabr/canary.git
+- &f18 "DISTRO_BRANCH=main"                                                  # DISTRO BRANCH TO DOWNLOAD / BY DEFAULT MAIN
 
 x-var4: &SYTEM_SETTINGS
-- &s1 "CHECK_DISTRO_UPDATES=yes"                # CHECK IF YOUR DISTRO HAS NEW COMMITS/UPDATES (yes / no)
-- &s2 "CHECK_DATAPACK_UPDATES=yes"              # CHECK IF YOUR DATAPACK HAS NEW COMMITS/UPDATES (yes / no)
-- &s3 "CHECK_AAC_UPDATES=yes"                   # CHECK IF YOUR AAC HAS NEW COMMITS/UPDATES (yes / no)
-- &s4 "CHECK_VA_UPDATES=yes"                    # CHECK IF YOUR OTBR VIRTUAL APPLIANCE HAS NEW COMMITS/UPDATES (yes / no)
+- &s1 "CHECK_DISTRO_UPDATES=yes"                # CHECK IF YOUR DISTRO'S HAS NEW COMMITS/UPDATES (yes / no)
+- &s2 "CHECK_DATAPACK_UPDATES=yes"              # CHECK IF YOUR DATAPACK'S HAS NEW COMMITS/UPDATES (yes / no)
+- &s3 "CHECK_AAC_UPDATES=yes"                   # CHECK IF YOUR AAC'S HAS NEW COMMITS/UPDATES (yes / no)
+- &s4 "CHECK_VA_UPDATES=yes"                    # CHECK IF YOUR OTBR VIRTUAL APPLIANCE'S HAS NEW COMMITS/UPDATES (yes / no)
 - &s5 "AUTOUPDATE_VA=yes"                       # AUTO-UPDATE YOUR OTBR VIRTUAL APPLIANCE (yes / no)
 
 #####################################################

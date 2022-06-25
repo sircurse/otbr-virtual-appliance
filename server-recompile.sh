@@ -4,8 +4,7 @@ cd /otbr/vcpkg/
 git fetch
 git pull
 
-if [ -d "build" ]
-then
+if [ -d "build" ]; then
         echo "Directory 'build' already exists, moving to it"
         cd /otbr/distro/build
         echo "Clean build directory"
@@ -18,16 +17,11 @@ else
 fi
 
 cmake --build linux-release || exit 1
-if [ $? -eq 1 ]
-then
+if [ $? -eq 1 ]; then
         echo "Compilation failed!"
 else
         echo "Compilation successful!"
         cd ..
-        if [ -f "canary" ]; then
-                echo "Saving old build"
-                mv /otbr/system/canary /otbr/system/canary.old
-        fi
         cp /build/linux-release/bin/canary /otbr/system/
         chown otadmin:root /otbr/system/canary
 fi
