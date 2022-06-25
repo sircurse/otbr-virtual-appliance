@@ -155,6 +155,7 @@ then
 		echo ""
 		echo "Setting up AAC..."
 		cd /var/www/html/
+		git config --global --add safe.directory /var/www/html
 		chown -R www-data.www-data /var/www/html
 		chmod 760 images/guilds
 		chmod 760 images/houses
@@ -178,6 +179,7 @@ else
 	echo ""
 	echo "Setting up AAC..."
 	cd /var/www/html/
+	git config --global --add safe.directory /var/www/html
 	chown -R www-data.www-data /var/www/html
 	chmod 760 images/guilds
 	chmod 760 images/houses
@@ -193,6 +195,8 @@ else
 		fi
 	echo "####################### SERVER BUILD COMPLETED #########################"
 fi
+
+git config --global --add safe.directory /otbr/vcpkg
 
 if [ -f /etc/nginx/sites-available/default ]; then
 	sleep 0

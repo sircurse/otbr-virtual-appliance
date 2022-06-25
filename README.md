@@ -67,6 +67,13 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --network nginxproxymanager_default
 ### **Deployment of OTBR - Virtual Appliance:**<br>
 LINK TO VIDEO TUTORIAL
 
+### **Ueseful Commands - Virtual Appliance:**<br>
+The most used process to maintain your server updated can be executed by commands from anywhere:
+$ db-backup # Force auto backup of your mysql database, the file can be found on host machine at path ***/srv/otbr/dbbkp***
+$ repo-update # Force update of the repositories, it includes the distro/canary repository, datapack/global repository and aac/myaac repository
+$ recompile # Force server to recompile, this process require some processing consumption, be caution while running it, once recompiled simple restart the server to apply the new binary or wait for the next server save.
+$ canary-restart # Force Canary server to restart.
+
 ### Issues
 
 We use the [issue tracker on GitHub](https://github.com/opentibiabr/canary/issues). Keep in mind that everyone who is watching the repository gets notified by e-mail when there is an activity, so be thoughtful and avoid writing comments that aren't meant for an issue (e.g. "+1"). If you'd like for an issue to be fixed faster, you should either fix it yourself and submit a pull request, or place a bounty on the issue.

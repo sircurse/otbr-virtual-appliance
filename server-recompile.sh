@@ -4,7 +4,7 @@ cd /otbr/vcpkg/
 git fetch
 git pull
 
-if [ -d "build" ]; then
+if [ -d "/otbr/distro/build/" ]; then
         echo "Directory 'build' already exists, moving to it"
         cd /otbr/distro/build
         echo "Clean build directory"
@@ -21,6 +21,6 @@ if [ $? -eq 1 ]; then
         echo "Compilation failed!"
 else
         echo "Compilation successful!"
-        cp /build/linux-release/bin/canary /otbr/system/
+        cp /otbr/distro/build/linux-release/bin/canary /otbr/system/canary
         chown otadmin:root /otbr/system/canary
 fi
