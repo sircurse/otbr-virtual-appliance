@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/opentibiabr/canary)](https://github.com/opentibiabr/canary/issues)
 [![GitHub pull request](https://img.shields.io/github/issues-pr/opentibiabr/canary)](https://github.com/opentibiabr/canary/pulls)
 [![Contributors](https://img.shields.io/github/contributors/opentibiabr/canary.svg?style=flat-square)](https://github.com/opentibiabr/canary/graphs/contributors)
-[![GitHub](https://img.shields.io/github/license/opentibiabr/canary)](https://github.com/opentibiabr/canary/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/sircurse/otbr-va)](https://github.com/sircurse/otbr-va/blob/master/LICENSE)
 ![Pulls](https://img.shields.io/docker/pulls/sircurse/otbr-va)
 
 ## Project - OpenTibiaBR
@@ -68,11 +68,15 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --network nginxproxymanager_default
 LINK TO VIDEO TUTORIAL
 
 ### **Ueseful Commands - Virtual Appliance:**<br>
-The most used process to maintain your server updated can be executed by commands from anywhere:
-$ db-backup # Force auto backup of your mysql database, the file can be found on host machine at path ***/srv/otbr/dbbkp***
-$ repo-update # Force update of the repositories, it includes the distro/canary repository, datapack/global repository and aac/myaac repository
-$ recompile # Force server to recompile, this process require some processing consumption, be caution while running it, once recompiled simple restart the server to apply the new binary or wait for the next server save.
-$ canary-restart # Force Canary server to restart.
+The most used process to maintain your server updated can be executed by commands from anywhere:<br>
+```$ db-backup```
+Force auto backup of your mysql database, the file can be found on host machine at path ***/srv/otbr/dbbkp***.<br>
+```$ repo-update```
+Force update of the repositories, it includes the distro/canary repository, datapack/global repository and aac/myaac repository.<br>
+```$ recompile```
+Force server to recompile, this process require some processing consumption, be caution while running it, once recompiled simple restart the server to apply the new binary or wait for the next server save.<br>
+```$ canary-restart```
+Force Canary server to restart.
 
 ### Issues
 
