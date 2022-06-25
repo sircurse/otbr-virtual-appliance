@@ -21,7 +21,6 @@ if [ $? -eq 1 ]; then
         echo "Compilation failed!"
 else
         echo "Compilation successful!"
-        cd ..
         cp /build/linux-release/bin/canary /otbr/system/
         chown otadmin:root /otbr/system/canary
 fi
