@@ -65,10 +65,14 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --network nginxproxymanager_default
 ```
 
 ### **Deployment of OTBR - Virtual Appliance:**<br>
-LINK TO VIDEO TUTORIAL
+LINK TO VIDEO TUTORIAL<br>
+Edit your MyAAC IP address to proceed with the installation:
 ```shell
 sed -i -e '$aMYIPADDRESS' /var/www/html/install/ip.txt
-rm -r /var/www/html/install/
+```
+After installed, for safety remove your install folder with the following command:
+```shell
+rm -r /var/www/html/install
 ```
 
 ### **Ueseful Commands - Virtual Appliance:**<br>
