@@ -207,7 +207,6 @@ else
 	else
 		cp /etc/nginx/templates/ssl-disabled /etc/nginx/sites-available/default
 		cd /etc/nginx/sites-available/
-		sed -i '/listen 80.*$/c\        listen '$HTTP_PORT' default_server;' default
-		sed -i '/80 default_server.*$/c\        listen [::]:'$HTTP_PORT' default_server;' default
+		sed -i 's/80 default_server;/'$HTTP_PORT' default_server;/g' default
 	fi
 fi

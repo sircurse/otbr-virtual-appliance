@@ -9,7 +9,7 @@ version: '3.4'
 #####################################################
 
 x-var1: &OTBR_VARS
-- &f1 "HTTP_PORT=8080"                         # PORT USED BY YOUR AAC (80, 443, 8080 ARE THE MOST USED)
+- &f1 "HTTP_PORT=8080"                         # PORT USED BY YOUR AAC WHEN NO SSL IS BEING USED (80, 8080 ARE THE MOST USED)
 - &f2 "ENABLE_SSL=no"                          # ENABLE OR DISABLE SSL / BY DEFAULT IS DISABLED (yes/no)
 - &f3 "SERVER_IP=127.0.0.1"                    # SERVER IP / DEFAULT IS LOCAL (127.0.0.1)
 - &f4 "SERVER_NAME=canary"                     # SERVER NAME / CAN BE ANY
