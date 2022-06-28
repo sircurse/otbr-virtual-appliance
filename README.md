@@ -66,6 +66,10 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --network nginxproxymanager_default
 
 ### **Deployment of OTBR - Virtual Appliance:**<br>
 LINK TO VIDEO TUTORIAL
+```shell
+sed -i -e '$aMYIPADDRESS' /var/www/html/install/ip.txt
+rm -r /var/www/html/install/
+```
 
 ### **Ueseful Commands - Virtual Appliance:**<br>
 The most used process to maintain your server updated can be executed by commands from anywhere:<br>
