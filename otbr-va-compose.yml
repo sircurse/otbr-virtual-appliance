@@ -32,7 +32,7 @@ x-var3: &DEFAULT_REPOS
 - &f17 "DISTRO_REPO=https://github.com/opentibiabr/canary.git"               # LINK OF DISTRO'S REPO / BY DEFAULT OTBR CANARY https://github.com/opentibiabr/canary.git
 - &f18 "DISTRO_BRANCH=main"                                                  # DISTRO BRANCH TO DOWNLOAD / BY DEFAULT MAIN
 
-x-var4: &SYTEM_SETTINGS
+x-var4: &SYSTEM_SETTINGS
 - &s1 "CHECK_DISTRO_UPDATES=yes"                # CHECK IF YOUR DISTRO'S HAS NEW COMMITS/UPDATES (yes / no)
 - &s2 "CHECK_DATAPACK_UPDATES=yes"              # CHECK IF YOUR DATAPACK'S HAS NEW COMMITS/UPDATES (yes / no)
 - &s3 "CHECK_AAC_UPDATES=yes"                   # CHECK IF YOUR AAC'S HAS NEW COMMITS/UPDATES (yes / no)
