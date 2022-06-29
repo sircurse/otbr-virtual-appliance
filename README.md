@@ -64,6 +64,14 @@ sudo docker rm portainer
 sudo docker run -d -p 8000:8000 -p 9443:9443 --network nginxproxymanager_default --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
 
+Note that some Ubuntus distributed over VPSs or if you are installing a Ubuntu fresh from a iso file, you may need to configure your user to have access external from some clients like WinSCP, to do so, edit your **/etc/sudoers**, adding at the end of the file the following line:<br>
+```
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+```
+You still need to set your SFTP client to execute with sudo previleges, like the bellow configuration on advanced settings of WinSCP:
+![image](https://user-images.githubusercontent.com/11935651/176328044-aac14f44-1ccb-41ae-9b2e-d7c2ae89d23f.png)
+
+
 ### **Deployment of OTBR - Virtual Appliance:**<br>
 LINK TO VIDEO TUTORIAL<br>
 Edit your MyAAC IP address to proceed with the installation:
