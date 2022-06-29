@@ -33,7 +33,9 @@ You are subject to our code of conduct, read at [this link](https://github.com/o
 * The TCP ports 7171 and 7172 are mandatory to run the game protocol and needs to be previously opened.
 
 ### **Deployment of Docker Server in Ubuntu 22.04:**<br>
-LINK TO VIDEO TUTORIAL
+**LINK TO VIDEO TUTORIAL**<br>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ILST5P62924/0.jpg)](http://www.youtube.com/watch?v=ILST5P62924 "Docker server deployment")
+
 ```shell
 sudo apt-get update
 sudo apt-get -y install ca-certificates curl gnupg lsb-release
@@ -47,7 +49,9 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```
 
 ### **Deployment of Portainer:**<br>
-LINK TO VIDEO TUTORIAL
+**LINK TO VIDEO TUTORIAL**<br>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/ltLUMu5RuB8/0.jpg)](http://www.youtube.com/watch?v=ltLUMu5RuB8 "Portainer deployment")
+
 ```shell
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
