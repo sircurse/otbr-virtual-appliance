@@ -70,7 +70,7 @@ echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 ```
 You still need to set your SFTP client to execute with sudo previleges, like the bellow configuration on advanced settings of WinSCP:
 ![image](https://user-images.githubusercontent.com/11935651/176328044-aac14f44-1ccb-41ae-9b2e-d7c2ae89d23f.png)
-After that, you should be able to open SFTP clients and edit files remotely.
+<br>After that, you should be able to open SFTP clients and edit files remotely.
 
 ### **Deployment of OTBR - Virtual Appliance:**<br>
 LINK TO VIDEO TUTORIAL<br>
