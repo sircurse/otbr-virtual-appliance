@@ -58,10 +58,16 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -
 ***PS: Additional steps can be executed in order to deploy a Proxy server in Docker. If so, folow the next steps. If not, jump to [Deployment of OTBR - Virtual Appliance](https://github.com/sircurse/otbr-va#deployment-of-otbr---virtual-appliance)***
 
 ### **Deployment of NGINX Proxy Manager:**<br>
-LINK TO VIDEO TUTORIAL
+This step is only required if you want to expose your otserv under SSL encryption.<br>
+**LINK TO VIDEO TUTORIAL**<br>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/hIWAys-sq_o/0.jpg)](http://www.youtube.com/watch?v=hIWAys-sq_o "NGINX Proxy Manager deployment")
+
 
 ### **Deployment of Portainer - Additional Steps:**<br>
-LINK TO VIDEO TUTORIAL
+This step is only required if you want to expose your otserv under SSL encryption.<br>
+**LINK TO VIDEO TUTORIAL**<br>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/wAIY9yHIpKc/0.jpg)](http://www.youtube.com/watch?v=wAIY9yHIpKc "SSL configuration")
+
 ```shell
 sudo docker stop portainer
 sudo docker rm portainer
