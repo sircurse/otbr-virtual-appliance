@@ -2,7 +2,7 @@
 
 CHECK_VA_UPDATES="${CHECK_VA_UPDATES:-yes}"
 AUTOUPDATE_VA="${AUTOUPDATE_VA:-yes}"
-VA_REPO="https://github.com/sircurse/otbr-va.git"
+VA_REPO="https://github.com/opentibiabr/otbr-va.git"
 VA_BRANCH="main"
 PREFIX="https://github."
 SUFFIX=".git"

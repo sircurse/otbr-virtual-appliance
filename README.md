@@ -55,7 +55,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 ```shell
 sudo docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
-***PS: Additional steps can be executed in order to deploy a Proxy server in Docker. If so, folow the next steps. If not, jump to [Deployment of OTBR - Virtual Appliance](https://github.com/sircurse/otbr-va#deployment-of-otbr---virtual-appliance)***
+***PS: Additional steps can be executed in order to deploy a Proxy server in Docker. If so, folow the next steps. If not, jump to [Deployment of OTBR - Virtual Appliance](https://github.com/opentibiabr/otbr-va#deployment-of-otbr---virtual-appliance)***
 
 ### **Deployment of NGINX Proxy Manager:**<br>
 This step is only required if you want to expose your otserv under SSL encryption.<br>

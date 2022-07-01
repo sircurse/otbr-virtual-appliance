@@ -34,7 +34,8 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
         echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
         echo "Usually it is required to sync the updates on your datapack and distro sources."
-        echo "You can also execute git fetch command in your main folder."
+        echo "You can execute the command 'repo-update' to update all your repositories at once."
+        echo "Or you can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
     else
@@ -44,7 +45,8 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
             echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
             echo "Usually it is required to sync the updates on your datapack and distro sources."
-            echo "You can also execute git fetch command in your main folder."
+            echo "You can execute the command 'repo-update' to update all your repositories at once."
+            echo "Or you can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
         else
@@ -52,7 +54,8 @@ LOCAL_DISTRO_MINOR=${LOCAL_DISTRO_MINOR%%.$LOCAL_DISTRO_PATCH}
                 echo ""
                 echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_DISTRO/commits/$DISTRO_BRANCH"
-                echo "You can also execute git fetch command in your main folder."
+                echo "You can execute the command 'repo-update' to update all your repositories at once."
+                echo "Or you can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
                 echo ""
             else
@@ -82,29 +85,32 @@ LOCAL_DATAPACK_MINOR=${LOCAL_DATAPACK_MINOR%%.$LOCAL_DATAPACK_PATCH}
 
     if [ "$LOCAL_DATAPACK_MAJOR" != "$REMOTE_DATAPACK_MAJOR" ]; then
         echo ""
-        echo "There is a major release on Canary Distro. For more information please check the latest commits on:"
+        echo "There is a major release on your Datapack. For more information please check the latest commits on:"
         echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
         echo "Usually it is required to sync the updates on your datapack and distro sources."
-        echo "You can also execute git fetch command in your main folder."
+        echo "You can execute the command 'repo-update' to update all your repositories at once."
+        echo "Or you can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
     else
         if [ "$LOCAL_DATAPACK_MINOR" != "$REMOTE_DATAPACK_MINOR" ]; then
             echo ""
-            echo "There is a minor update on Canary Distro. For more information please check the latest commits on:"
+            echo "There is a minor update on your Datapack. For more information please check the latest commits on:"
             echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
             echo "Usually it is required to sync the updates on your datapack and distro sources."
-            echo "You can also execute git fetch command in your main folder."
+            echo "You can execute the command 'repo-update' to update all your repositories at once."
+            echo "Or you can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
         else
             if [ "$LOCAL_DATAPACK_PATCH" != "$REMOTE_DATAPACK_PATCH" ]; then
                 echo ""
-                echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
+                echo "There are new fixes or patches available on your Datapack. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_DATAPACK/commits/$DATAPACK_BRANCH"
-                echo "You can also execute git fetch command in your main folder."
+                echo "You can execute the command 'repo-update' to update all your repositories at once."
+                echo "Or you can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
                 echo ""
             else
@@ -134,29 +140,32 @@ LOCAL_AAC_MINOR=${LOCAL_AAC_MINOR%%.$LOCAL_AAC_PATCH}
 
     if [ "$LOCAL_AAC_MAJOR" != "$REMOTE_AAC_MAJOR" ]; then
         echo ""
-        echo "There is a major release on Canary Distro. For more information please check the latest commits on:"
+        echo "There is a major release on your AAC. For more information please check the latest commits on:"
         echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
         echo "It is recommend to follow any guide while updating major releases."
         echo "Usually it is required to sync the updates on your datapack and distro sources."
-        echo "You can also execute git fetch command in your main folder."
+        echo "You can execute the command 'repo-update' to update all your repositories at once."
+        echo "Or you can also execute git fetch command in your main folder."
         echo "Followed by git pull."
         echo ""
     else
         if [ "$LOCAL_AAC_MINOR" != "$REMOTE_AAC_MINOR" ]; then
             echo ""
-            echo "There is a minor update on Canary Distro. For more information please check the latest commits on:"
+            echo "There is a minor update on your AAC. For more information please check the latest commits on:"
             echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
             echo "It is recommend to follow any guide while updating minor versions."
             echo "Usually it is required to sync the updates on your datapack and distro sources."
-            echo "You can also execute git fetch command in your main folder."
+            echo "You can execute the command 'repo-update' to update all your repositories at once."
+            echo "Or you can also execute git fetch command in your main folder."
             echo "Followed by git pull."
             echo ""
         else
             if [ "$LOCAL_AAC_PATCH" != "$REMOTE_AAC_PATCH" ]; then
                 echo ""
-                echo "There are new fixes or patches available on your Canary Distro. For more information please check the latest commits on:"
+                echo "There are new fixes or patches available on your AAC. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_AAC/commits/$AAC_BRANCH"
-                echo "You can also execute git fetch command in your main folder."
+                echo "You can execute the command 'repo-update' to update all your repositories at once."
+                echo "Or you can also execute git fetch command in your main folder."
                 echo "Followed by git pull."
                 echo ""
             else
