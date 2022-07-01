@@ -83,7 +83,9 @@ You still need to set your SFTP client to execute with sudo previleges, like the
 <br>After that, you should be able to open SFTP clients and edit files remotely.
 
 ### **Deployment of OTBR - Virtual Appliance:**<br>
-LINK TO VIDEO TUTORIAL<br>
+**LINK TO VIDEO TUTORIAL**<br>
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/aHVCG8fOuTE/0.jpg)](http://www.youtube.com/watch?v=aHVCG8fOuTE "OTBR-VA Deployment")
+
 Edit your MyAAC IP address to proceed with the installation:
 ```shell
 sed -i -e '$aMYIPADDRESS' /var/www/html/install/ip.txt
