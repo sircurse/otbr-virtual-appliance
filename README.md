@@ -66,7 +66,7 @@ This step is only required if you want to expose your otserv under SSL encryptio
 ### **Deployment of Portainer - Additional Steps:**<br>
 This step is only required if you want to expose your otserv under SSL encryption.<br>
 **LINK TO VIDEO TUTORIAL**<br>
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/wAIY9yHIpKc/0.jpg)](http://www.youtube.com/watch?v=wAIY9yHIpKc "SSL configuration")
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/5fI1AAvHOSU/0.jpg)](http://www.youtube.com/watch?v=5fI1AAvHOSU "SSL configuration")
 
 ```shell
 sudo docker stop portainer
