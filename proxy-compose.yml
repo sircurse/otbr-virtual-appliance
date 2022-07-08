@@ -28,7 +28,7 @@ services:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
   db:
-    image: 'jc21/mariadb-aria:latest'
+    image: 'yobasystems/alpine-mariadb:latest'
     restart: unless-stopped
     networks:
       nginxproxymanager_default:
