@@ -1,6 +1,6 @@
 #!/bin/bash
 
-N=10
+N=5
 DEFAULT_MAP="${DEFAULT_MAP:-otbr}"
 
 echo ""
@@ -12,9 +12,6 @@ echo "########################################################################"
 /bin/bash /otbr/system/server-check-update.sh
 
 echo "######################## STARTING UP SERVICES ##########################"
-sleep $N
-
-echo ""
 echo "Starting crontab..."
 service cron start
 echo ""
@@ -26,7 +23,8 @@ echo ""
 
 echo "Starting Nginx..."
 service nginx start
-echo ""
+
+sleep $N
 
 echo "########################################################################"
 echo "###################### STARTING UP CANARY SERVER #######################"
