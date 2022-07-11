@@ -24,7 +24,7 @@ function version_lt() { test "$(echo "$@" | tr " " "\n" | sort -rV | head -n 1)"
 
 # Check versions
 if version_lt $LOCAL_VA_VER $REMOTE_VA_VER; then
-    if version_lt $LOCAL_VA_VER "1.1.2"; then # UPDATE v1.2.0
+    if version_lt $LOCAL_VA_VER "1.2.1"; then # UPDATE v1.2.1
         wget -q -O /otbr/system/va-check-update.sh https://raw.githubusercontent.$REMOTE_VA/main/va-check-update.sh
         chmod +x /otbr/system/va-check-update.sh
         sed -i -e 's/\r$//' /otbr/system/va-check-update.sh
