@@ -23,9 +23,9 @@ jobs:
         with:
           skip-tag: 'true'
           tag-prefix: 'v'
-          major-wording: '#MAJOR,cut-major'
-          minor-wording: '#ADD,Adds,new'
-          patch-wording: '#FIXES,fixes'
+          major-wording: '#MAJOR,#major'
+          minor-wording: '#MINOR,#minor'
+          patch-wording: '#FIXES,#fixes'
           rc-wording:    '#RELEASE,alpha'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
