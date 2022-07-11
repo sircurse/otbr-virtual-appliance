@@ -1,19 +1,12 @@
 #!/bin/bash
-
-path="/otbr/dbbkp"               #Path where the backup of your database "Db
-nameBackup="dbbkp"                      #Name of your choice for the backup
-mysqlSrv="otservdb"
-mysqlUser="mydbuser"
-mysqlPass="mypassword"
-mysqlDatabase="canary"
-
+DB_NAME="${MARIADB_DATABASE:-canary}"
 
 # Don't move from here
-TIMER="$(date +'%d-%m-%Y-%H-%M')"
+TIME="$(date +'%d-%m-%Y-%H-%M')"
 
-if [[ -z "$mysqlUser" || -z "$mysqlPass" || -z "$mysqlDatabase" ]]; then
-    echo "Please fill in username, password and database in settings."
+if [[ -z "$DB_NAME" ]]; then
+    echo "Database name in environments while installing the VA."
 else
-    mysqldump --login-path=local --column-statistics=0 $mysqlDatabase | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' > $path"/"$nameBackup"-"$TIMER".sql"
+    mysqldump --login-path=local --column-statistics=0 $DB_NAME | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' > "/otbr/dbbkp/dbbkp-"$TIME".sql"
     echo "Backup Complete."
 fi
