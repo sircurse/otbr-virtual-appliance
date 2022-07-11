@@ -17,7 +17,7 @@ LOCAL_VA_PATCH=${LOCAL_VA_VER##*.}
 LOCAL_VA_MINOR=${LOCAL_VA_VER##$LOCAL_VA_MAJOR.}
 LOCAL_VA_MINOR=${LOCAL_VA_MINOR%%.$LOCAL_VA_PATCH}
 
-if (($LOCAL_VA_PATCH <= 15 )); then # Start update <= v1.0.15
+if (($LOCAL_VA_PATCH <= 16 )); then # Start update <= v1.0.15
     wget -q -O /otbr/system/va-check-update.sh https://raw.githubusercontent.$REMOTE_VA/main/va-check-update.sh
     chmod +x /otbr/system/va-check-update.sh
 
