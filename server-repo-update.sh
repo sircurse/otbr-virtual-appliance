@@ -1,16 +1,24 @@
 #!/bin/bash
 
 cd /otbr/distro/
+echo "Updating distro repo.."
+git config pull.rebase false
 git fetch
 git pull
 
 cd /otbr/server/
+echo ""
+echo "Updating datapack repo.."
+git config pull.rebase false
 git fetch
 git pull
 
 chown -R otadmin:root /otbr/*
 
 cd /var/www/html/
+echo ""
+echo "Updating AAC repo.."
+git config pull.rebase false
 git fetch
 git pull
 chown -R www-data.www-data /var/www/html
