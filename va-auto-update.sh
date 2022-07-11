@@ -6,7 +6,8 @@ VA_REPO="https://github.com/opentibiabr/otbr-va.git"
 VA_BRANCH="main"
 PREFIX="https://github."
 SUFFIX=".git"
-
+REMOTE_VA=${VA_REPO#"$PREFIX"}
+REMOTE_VA=${REMOTE_VA%"$SUFFIX"}
 
 # Check OTBR-VA Updates
 MSORT_OK=$(dpkg-query -W --showformat='${Status}\n' msort|grep "install ok installed")
