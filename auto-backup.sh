@@ -14,6 +14,6 @@ TIMER="$(date +'%d-%m-%Y-%H-%M')"
 if [[ -z "$mysqlUser" || -z "$mysqlPass" || -z "$mysqlDatabase" ]]; then
     echo "Please fill in username, password and database in settings."
 else
-    mysqldump --login-path=local --column-statistics=0 $mysqlDatabase > $path"/"$nameBackup"-"$TIMER".sql"
+    mysqldump --login-path=local --column-statistics=0 $mysqlDatabase | sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' > $path"/"$nameBackup"-"$TIMER".sql"
     echo "Backup Complete."
 fi

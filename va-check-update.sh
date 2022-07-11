@@ -52,7 +52,7 @@ LOCAL_VA_MINOR=${LOCAL_VA_MINOR%%.$LOCAL_VA_PATCH}
                 echo "There are new fixes or patches available for OTBR Virtual Appliance. For more information please check the latest commits on:"
                 echo "https://github.com/$REMOTE_VA/commits/$VA_BRANCH"
                 echo "Fixes and patches are executed during the startup process and it might restart the Canary service to conclude the changes."
-                wget -q -O /otbr/system/server-build/va-auto-update.sh https://raw.githubusercontent.$REMOTE_VA/main/va-auto-patch.sh
+                wget -q -O /otbr/system/server-build/va-auto-patch.sh https://raw.githubusercontent.$REMOTE_VA/main/va-auto-patch.sh
                 chmod +x /otbr/system/server-build/va-auto-patch.sh
                 /bin/bash /otbr/system/server-build/va-auto-patch.sh
                 mv /otbr/system/tmp/va-version.json /otbr/system/server-build/package.json
